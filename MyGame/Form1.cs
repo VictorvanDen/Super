@@ -25,10 +25,39 @@ namespace MyGame
             InitializeComponent();
         }
 
+        public void LabelUpdade ()
+        {
+            label5.Text = Plane1.hp.ToString(); // для команды 1 Самолёт
+            label7.Text = Plane1.ap.ToString(); // для команды 1 Самолёт
+
+            label12.Text = Tank1.hp.ToString(); // для команды 1 Танк
+            label13.Text = Tank1.ap.ToString(); // для команды 1 Танк
+
+            label14.Text = Magic1.hp.ToString(); // для команды 1 Маг
+            label15.Text = Magic1.ap.ToString(); // для команды 1 Маг
+
+            label18.Text = Ship1.hp.ToString(); // для команды 1 Маг
+            label19.Text = Ship1.ap.ToString();    // для команды 1 Маг
+
+
+
+            label34.Text = Plane2.hp.ToString(); // для команды 2 Самолёт
+            label32.Text = Plane2.ap.ToString(); // для команды 2 Самолёт
+
+            label27.Text = Tank2.hp.ToString(); // для команды 2 Танк
+            label26.Text = Tank2.ap.ToString(); // для команды 2 Танк
+
+            label25.Text = Magic2.hp.ToString(); // для команды 2 Маг
+            label24.Text = Magic2.ap.ToString(); // для команды 2 Маг
+
+            label21.Text = Ship2.hp.ToString(); // для команды 2 Корабль
+            label20.Text = Ship2.ap.ToString(); // для команды 2 Корабль
+
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            LabelUpdade();
         }
     }
 }
