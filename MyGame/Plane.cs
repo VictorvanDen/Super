@@ -19,6 +19,7 @@ namespace MyGame
             this.team = team;
             this.maxhp = maxhp;
             this.contr = contr;
+            
         }
     }
 }

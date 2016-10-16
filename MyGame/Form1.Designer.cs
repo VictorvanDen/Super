@@ -566,6 +566,7 @@
             this.Attack1.TabIndex = 60;
             this.Attack1.Text = "Attack";
             this.Attack1.UseVisualStyleBackColor = true;
+            this.Attack1.Click += new System.EventHandler(this.Attack1_Click);
             // 
             // Ship
             // 

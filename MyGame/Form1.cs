@@ -59,5 +59,10 @@ namespace MyGame
         {
             LabelUpdade();
         }
+
+        private void Attack1_Click(object sender, EventArgs e)
+        {
+            Plane1.Attack();
+        }
     }
 }
