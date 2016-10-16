@@ -9,18 +9,19 @@ namespace MyGame
 
     class Magic : Hero
     {
-            public Magic(int hp, int ap, int dmg, int ex, int maxap, bool team, int maxhp, string contr)
-            {
-                this.hp = hp;
-                this.ap = ap;
-                this.dmg = dmg;
-                this.ex = ex;
-                this.maxap = maxap;
-                this.team = team;
-                this.maxhp = maxhp;
-                this.contr = contr;
-           
-            }
+            public Magic(int maxhp, int hp, int maxap, int ap, int dmg, int ex, bool team, string contr)
+        {
+            this.Maxhp = maxhp;
+            this.Hp = hp;
+            this.Maxap = maxap;
+            this.Ap = ap;
+            this.Dmg = dmg;
+            this.Ex = ex;
+            this.Maxap = maxap;
+            this.Team = team;
+            this.Maxhp = maxhp;
+            this.Contr = contr;
         }
+    }
     }
 

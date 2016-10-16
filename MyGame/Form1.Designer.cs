@@ -85,6 +85,34 @@
             this.Magic = new System.Windows.Forms.PictureBox();
             this.Tank = new System.Windows.Forms.PictureBox();
             this.Plane = new System.Windows.Forms.PictureBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.progressBar3 = new System.Windows.Forms.ProgressBar();
+            this.progressBar4 = new System.Windows.Forms.ProgressBar();
+            this.progressBar5 = new System.Windows.Forms.ProgressBar();
+            this.progressBar6 = new System.Windows.Forms.ProgressBar();
+            this.progressBar7 = new System.Windows.Forms.ProgressBar();
+            this.progressBar8 = new System.Windows.Forms.ProgressBar();
+            this.progressBar9 = new System.Windows.Forms.ProgressBar();
+            this.progressBar10 = new System.Windows.Forms.ProgressBar();
+            this.progressBar11 = new System.Windows.Forms.ProgressBar();
+            this.progressBar12 = new System.Windows.Forms.ProgressBar();
+            this.progressBar13 = new System.Windows.Forms.ProgressBar();
+            this.progressBar14 = new System.Windows.Forms.ProgressBar();
+            this.progressBar15 = new System.Windows.Forms.ProgressBar();
+            this.progressBar16 = new System.Windows.Forms.ProgressBar();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -93,6 +121,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Magic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Plane)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -320,6 +352,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 87;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -330,6 +363,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 86;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -340,6 +374,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 85;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 
@@ -350,6 +385,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 84;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // Самолёт
             // 
@@ -608,11 +644,302 @@
             this.Plane.TabIndex = 56;
             this.Plane.TabStop = false;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(466, 136);
+            this.progressBar1.Maximum = 300;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.Step = 1;
+            this.progressBar1.TabIndex = 112;
+            this.progressBar1.Value = 300;
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(466, 172);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(100, 23);
+            this.progressBar2.Step = 1;
+            this.progressBar2.TabIndex = 113;
+            // 
+            // progressBar3
+            // 
+            this.progressBar3.Location = new System.Drawing.Point(466, 237);
+            this.progressBar3.Maximum = 800;
+            this.progressBar3.Name = "progressBar3";
+            this.progressBar3.Size = new System.Drawing.Size(100, 23);
+            this.progressBar3.Step = 1;
+            this.progressBar3.TabIndex = 114;
+            // 
+            // progressBar4
+            // 
+            this.progressBar4.Location = new System.Drawing.Point(466, 275);
+            this.progressBar4.Maximum = 800;
+            this.progressBar4.Name = "progressBar4";
+            this.progressBar4.Size = new System.Drawing.Size(100, 23);
+            this.progressBar4.Step = 1;
+            this.progressBar4.TabIndex = 115;
+            // 
+            // progressBar5
+            // 
+            this.progressBar5.Location = new System.Drawing.Point(466, 339);
+            this.progressBar5.Maximum = 110;
+            this.progressBar5.Name = "progressBar5";
+            this.progressBar5.Size = new System.Drawing.Size(100, 23);
+            this.progressBar5.Step = 1;
+            this.progressBar5.TabIndex = 116;
+            // 
+            // progressBar6
+            // 
+            this.progressBar6.Location = new System.Drawing.Point(466, 388);
+            this.progressBar6.Maximum = 200;
+            this.progressBar6.Name = "progressBar6";
+            this.progressBar6.Size = new System.Drawing.Size(100, 23);
+            this.progressBar6.Step = 1;
+            this.progressBar6.TabIndex = 117;
+            this.progressBar6.Click += new System.EventHandler(this.progressBar6_Click);
+            // 
+            // progressBar7
+            // 
+            this.progressBar7.Location = new System.Drawing.Point(466, 453);
+            this.progressBar7.Maximum = 500;
+            this.progressBar7.Name = "progressBar7";
+            this.progressBar7.Size = new System.Drawing.Size(100, 23);
+            this.progressBar7.Step = 1;
+            this.progressBar7.TabIndex = 118;
+            // 
+            // progressBar8
+            // 
+            this.progressBar8.Location = new System.Drawing.Point(466, 489);
+            this.progressBar8.Maximum = 150;
+            this.progressBar8.Name = "progressBar8";
+            this.progressBar8.Size = new System.Drawing.Size(100, 23);
+            this.progressBar8.Step = 1;
+            this.progressBar8.TabIndex = 119;
+            // 
+            // progressBar9
+            // 
+            this.progressBar9.Location = new System.Drawing.Point(1098, 162);
+            this.progressBar9.Maximum = 300;
+            this.progressBar9.Name = "progressBar9";
+            this.progressBar9.Size = new System.Drawing.Size(100, 23);
+            this.progressBar9.Step = 1;
+            this.progressBar9.TabIndex = 120;
+            // 
+            // progressBar10
+            // 
+            this.progressBar10.Location = new System.Drawing.Point(1098, 209);
+            this.progressBar10.Maximum = 300;
+            this.progressBar10.Name = "progressBar10";
+            this.progressBar10.Size = new System.Drawing.Size(100, 23);
+            this.progressBar10.Step = 1;
+            this.progressBar10.TabIndex = 121;
+            // 
+            // progressBar11
+            // 
+            this.progressBar11.Location = new System.Drawing.Point(1098, 275);
+            this.progressBar11.Maximum = 800;
+            this.progressBar11.Name = "progressBar11";
+            this.progressBar11.Size = new System.Drawing.Size(100, 23);
+            this.progressBar11.Step = 1;
+            this.progressBar11.TabIndex = 122;
+            // 
+            // progressBar12
+            // 
+            this.progressBar12.Location = new System.Drawing.Point(1098, 312);
+            this.progressBar12.Maximum = 800;
+            this.progressBar12.Name = "progressBar12";
+            this.progressBar12.Size = new System.Drawing.Size(100, 23);
+            this.progressBar12.Step = 1;
+            this.progressBar12.TabIndex = 123;
+            // 
+            // progressBar13
+            // 
+            this.progressBar13.Location = new System.Drawing.Point(1098, 376);
+            this.progressBar13.Maximum = 110;
+            this.progressBar13.Name = "progressBar13";
+            this.progressBar13.Size = new System.Drawing.Size(100, 23);
+            this.progressBar13.Step = 1;
+            this.progressBar13.TabIndex = 124;
+            // 
+            // progressBar14
+            // 
+            this.progressBar14.Location = new System.Drawing.Point(1098, 414);
+            this.progressBar14.Maximum = 200;
+            this.progressBar14.Name = "progressBar14";
+            this.progressBar14.Size = new System.Drawing.Size(100, 23);
+            this.progressBar14.Step = 1;
+            this.progressBar14.TabIndex = 125;
+            // 
+            // progressBar15
+            // 
+            this.progressBar15.Location = new System.Drawing.Point(1098, 468);
+            this.progressBar15.Maximum = 500;
+            this.progressBar15.Name = "progressBar15";
+            this.progressBar15.Size = new System.Drawing.Size(100, 23);
+            this.progressBar15.Step = 1;
+            this.progressBar15.TabIndex = 126;
+            // 
+            // progressBar16
+            // 
+            this.progressBar16.Location = new System.Drawing.Point(1098, 515);
+            this.progressBar16.Maximum = 150;
+            this.progressBar16.Name = "progressBar16";
+            this.progressBar16.Size = new System.Drawing.Size(100, 23);
+            this.progressBar16.Step = 1;
+            this.progressBar16.TabIndex = 127;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(144, 153);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(41, 13);
+            this.label39.TabIndex = 128;
+            this.label39.Text = "label39";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(143, 255);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(41, 13);
+            this.label40.TabIndex = 129;
+            this.label40.Text = "label40";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(142, 357);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(41, 13);
+            this.label41.TabIndex = 130;
+            this.label41.Text = "label41";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(141, 452);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(41, 13);
+            this.label42.TabIndex = 131;
+            this.label42.Text = "label42";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(768, 173);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(41, 13);
+            this.label43.TabIndex = 132;
+            this.label43.Text = "label43";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(767, 274);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(41, 13);
+            this.label44.TabIndex = 133;
+            this.label44.Text = "label44";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(766, 385);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(41, 13);
+            this.label45.TabIndex = 134;
+            this.label45.Text = "label45";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(768, 479);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(41, 13);
+            this.label46.TabIndex = 135;
+            this.label46.Text = "label46";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(769, 128);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(429, 104);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 136;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(771, 231);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(429, 104);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 137;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(771, 331);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(429, 104);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 138;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Visible = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(771, 434);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(429, 104);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 139;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 630);
+            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.label46);
+            this.Controls.Add(this.label45);
+            this.Controls.Add(this.label44);
+            this.Controls.Add(this.label43);
+            this.Controls.Add(this.label42);
+            this.Controls.Add(this.label41);
+            this.Controls.Add(this.label40);
+            this.Controls.Add(this.label39);
+            this.Controls.Add(this.progressBar16);
+            this.Controls.Add(this.progressBar15);
+            this.Controls.Add(this.progressBar14);
+            this.Controls.Add(this.progressBar13);
+            this.Controls.Add(this.progressBar12);
+            this.Controls.Add(this.progressBar11);
+            this.Controls.Add(this.progressBar10);
+            this.Controls.Add(this.progressBar9);
+            this.Controls.Add(this.progressBar8);
+            this.Controls.Add(this.progressBar7);
+            this.Controls.Add(this.progressBar6);
+            this.Controls.Add(this.progressBar5);
+            this.Controls.Add(this.progressBar4);
+            this.Controls.Add(this.progressBar3);
+            this.Controls.Add(this.progressBar2);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label21);
@@ -680,6 +1007,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.Magic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tank)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Plane)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -743,6 +1074,34 @@
         private System.Windows.Forms.PictureBox Magic;
         private System.Windows.Forms.PictureBox Tank;
         private System.Windows.Forms.PictureBox Plane;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.ProgressBar progressBar3;
+        private System.Windows.Forms.ProgressBar progressBar4;
+        private System.Windows.Forms.ProgressBar progressBar5;
+        private System.Windows.Forms.ProgressBar progressBar6;
+        private System.Windows.Forms.ProgressBar progressBar7;
+        private System.Windows.Forms.ProgressBar progressBar8;
+        private System.Windows.Forms.ProgressBar progressBar9;
+        private System.Windows.Forms.ProgressBar progressBar10;
+        private System.Windows.Forms.ProgressBar progressBar11;
+        private System.Windows.Forms.ProgressBar progressBar12;
+        private System.Windows.Forms.ProgressBar progressBar13;
+        private System.Windows.Forms.ProgressBar progressBar14;
+        private System.Windows.Forms.ProgressBar progressBar15;
+        private System.Windows.Forms.ProgressBar progressBar16;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }
 

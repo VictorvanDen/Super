@@ -12,57 +12,169 @@ namespace MyGame
 {
     public partial class Form1 : Form
     {
-        Hero Magic1 = new Magic(110, 200, 10, 0, 100, true, 110, "ship");
-        Hero Plane1 = new Plane(300, 100, 70, 0, 100, true, 300, "tank");
-        Hero Tank1 = new Tank(600, 100, 20, 0, 100, true, 600, "Magic");
-        Hero Ship1 = new Ship(500, 100, 50, 0, 100, true, 500, "Plane");
-        Hero Magic2 = new Magic(110, 200, 10, 0, 100, false, 110, "ship");
-        Hero Plane2 = new Plane(300, 100, 70, 0, 100, false, 300, "tank");
-        Hero Tank2 = new Tank(600, 100, 20, 0, 100, false, 600, "Magic");
-        Hero Ship2 = new Ship(500, 100, 50, 0, 100, false, 500, "Plane");
+        Hero Magic1 = new Magic(110, 110, 200, 100, 10, 0, true, "Ship");
+        Hero Plane1 = new Plane(300, 300, 100, 100, 70, 0, true, "Tank");
+        Hero Tank1 = new Tank(800, 800, 100, 100, 20, 0, true, "Magic");
+        Hero Ship1 = new Ship(500, 500, 150, 150, 50, 0, true, "Plane");
+        Hero Magic2 = new Magic(110, 110, 200, 200, 10, 0, false, "Ship");
+        Hero Plane2 = new Plane(300, 300, 100, 100, 70, 0, false, "Tank");
+        Hero Tank2 = new Tank(800, 800, 100, 100, 20, 0, false, "Magic");
+        Hero Ship2 = new Ship(500, 500, 150, 150, 50, 0, false, "Plane");
         public Form1()
         {
             InitializeComponent();
         }
+        public void DeathCheck()
+        {
+            if (Plane1.Hp == 0)
+            {
+                this.Controls.Remove(Attack1);
+                Attack1.Dispose();
+               
+            }
 
+            if (Plane2.Hp == 0)
+            {
+                this.Controls.Remove(button4);
+                button4.Dispose();
+                pictureBox4.Visible = true;
+            }
+            if (Tank1.Hp == 0)
+            {
+                this.Controls.Remove(Attack2);
+                Attack2.Dispose();
+            }
+            if (Magic1.Hp == 0)
+            {
+                this.Controls.Remove(Attack3);
+                Attack3.Dispose();
+            }
+            if (Ship1.Hp == 0)
+            {
+                this.Controls.Remove(Attack4);
+                Attack4.Dispose();
+            }
+            if (Tank2.Hp == 0)
+            {
+                this.Controls.Remove(button3);
+                button3.Dispose();
+                pictureBox6.Visible = true;
+            }
+            if (Magic2.Hp == 0)
+            {
+                this.Controls.Remove(button2);
+                button2.Dispose();
+                pictureBox7.Visible = true;
+            }
+            if (Ship2.Hp == 0)
+            {
+                this.Controls.Remove(button1);
+                button1.Dispose();
+                pictureBox8.Visible = true;
+            }
+        }
+        public void ProgressBarUpdate()
+        {
+            progressBar1.BackColor = Color.Aqua;
+            progressBar1.Value = Plane1.Hp;
+            progressBar2.Value = Plane1.Ap;
+            progressBar3.Value = Tank1.Hp;
+            progressBar4.Value = Tank1.Ap;
+            progressBar5.Value = Magic1.Hp;
+            progressBar6.Value = Magic1.Ap;
+            progressBar7.Value = Ship1.Hp;
+            progressBar8.Value = Ship1.Ap;
+
+            progressBar9.BackColor = Color.Aqua;
+            progressBar9.Value = Plane2.Hp;
+            progressBar10.Value = Plane2.Ap;
+            progressBar11.Value = Tank2.Hp;
+            progressBar12.Value = Tank2.Ap;
+            progressBar13.Value = Magic2.Hp;
+            progressBar14.Value = Magic2.Ap;
+            progressBar15.Value = Ship2.Hp;
+            progressBar16.Value = Ship2.Ap;
+
+        }
         public void LabelUpdade ()
         {
-            label5.Text = Plane1.hp.ToString(); // для команды 1 Самолёт
-            label7.Text = Plane1.ap.ToString(); // для команды 1 Самолёт
+            label39.Text = Plane1.Hp.ToString();
+            label5.Text = Plane1.Hp.ToString(); // для команды 1 Самолёт
+            label7.Text = Plane1.Ap.ToString(); // для команды 1 Самолёт
 
-            label12.Text = Tank1.hp.ToString(); // для команды 1 Танк
-            label13.Text = Tank1.ap.ToString(); // для команды 1 Танк
+            label12.Text = Tank1.Hp.ToString(); // для команды 1 Танк
+            label13.Text = Tank1.Ap.ToString(); // для команды 1 Танк
 
-            label14.Text = Magic1.hp.ToString(); // для команды 1 Маг
-            label15.Text = Magic1.ap.ToString(); // для команды 1 Маг
+            label14.Text = Magic1.Hp.ToString(); // для команды 1 Маг
+            label15.Text = Magic1.Ap.ToString(); // для команды 1 Маг
 
-            label18.Text = Ship1.hp.ToString(); // для команды 1 Маг
-            label19.Text = Ship1.ap.ToString();    // для команды 1 Маг
+            label18.Text = Ship1.Hp.ToString(); // для команды 1 Маг
+            label19.Text = Ship1.Ap.ToString();    // для команды 1 Маг
 
 
 
-            label34.Text = Plane2.hp.ToString(); // для команды 2 Самолёт
-            label32.Text = Plane2.ap.ToString(); // для команды 2 Самолёт
+            label34.Text = Plane2.Hp.ToString(); // для команды 2 Самолёт
+            label32.Text = Plane2.Ap.ToString(); // для команды 2 Самолёт
 
-            label27.Text = Tank2.hp.ToString(); // для команды 2 Танк
-            label26.Text = Tank2.ap.ToString(); // для команды 2 Танк
+            label27.Text = Tank2.Hp.ToString(); // для команды 2 Танк
+            label26.Text = Tank2.Ap.ToString(); // для команды 2 Танк
 
-            label25.Text = Magic2.hp.ToString(); // для команды 2 Маг
-            label24.Text = Magic2.ap.ToString(); // для команды 2 Маг
+            label25.Text = Magic2.Hp.ToString(); // для команды 2 Маг
+            label24.Text = Magic2.Ap.ToString(); // для команды 2 Маг
 
-            label21.Text = Ship2.hp.ToString(); // для команды 2 Корабль
-            label20.Text = Ship2.ap.ToString(); // для команды 2 Корабль
-
+            label21.Text = Ship2.Hp.ToString(); // для команды 2 Корабль
+            label20.Text = Ship2.Ap.ToString(); // для команды 2 Корабль
+            ProgressBarUpdate();
+            DeathCheck();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             LabelUpdade();
+            ProgressBarUpdate();
         }
 
         private void Attack1_Click(object sender, EventArgs e)
         {
+            Plane1.Target = Plane1.Target;
+            Plane1.Ex = Plane1.Ex + 1;
             Plane1.Attack();
+            if (Plane1.Target.Hp == 0)
+            {
+                Plane1.Hp = Plane1.Hp + 10;
+            }
+           
+            LabelUpdade();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Plane1.Target = Plane2;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Plane1.Target = Tank2;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Plane1.Target = Magic2;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Plane1.Target = Ship2;
+        }
+
+        private void progressBar6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
