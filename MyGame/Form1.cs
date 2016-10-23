@@ -12,6 +12,8 @@ namespace MyGame
 {
     public partial class Form1 : Form
     {
+        Hero agressor;
+        int stage = 0;
         Hero Magic1 = new Magic(110, 110, 200, 100, 10, 0, true, "Ship");
         Hero Plane1 = new Plane(300, 300, 100, 100, 70, 0, true, "Tank");
         Hero Tank1 = new Tank(800, 800, 100, 100, 20, 0, true, "Magic");
@@ -138,43 +140,52 @@ namespace MyGame
         {
             LabelUpdade();
             ProgressBarUpdate();
+            Stage0();
         }
 
         private void Attack1_Click(object sender, EventArgs e)
         {
-            Plane1.Target = Plane1.Target;
-            if (Plane1.Target.Hp == 1)
-            {
-                Plane1.Ex += 10;
-            }
-            Plane1.Ex = Plane1.Ex + 1;
-            Plane1.Attack();
-            if (Plane1.Target.Hp == 0)
-            {
-                Plane1.Hp = Plane1.Hp + 10;
-            }
-           
+            //Plane1.Target = Plane1.Target;
+            //if (Plane1.Target.Hp == 1)
+            //{
+            //    Plane1.Ex += 10;
+            //}
+            //Plane1.Ex = Plane1.Ex + 1;
+            //Plane1.Attack();
+            //if (Plane1.Target.Hp == 0)
+            //{
+            //    Plane1.Hp = Plane1.Hp + 10;
+            //}
+            agressor = Plane1;
             LabelUpdade();
+            Stage1();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Plane1.Target = Plane2;
+            agressor.Target = Plane2;
+            agressor.Attack();
+            Stage2();
         }
-
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Plane1.Target = Tank2;
+            agressor.Target = Tank2;
+            agressor.Attack();
+            Stage2();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Plane1.Target = Magic2;
+            agressor.Target = Magic2;
+            agressor.Attack();
+            Stage2();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Plane1.Target = Ship2;
+            agressor.Target = Ship2;
+            agressor.Attack();
+            Stage2();
         }
 
         private void progressBar6_Click(object sender, EventArgs e)
@@ -189,129 +200,219 @@ namespace MyGame
 
         private void Attack2_Click(object sender, EventArgs e)
         {
-            Tank1.Target = Plane1.Target;
-            if (Tank1.Target.Hp == 1)
-            {
-                Tank1.Ex += 10;
-            }
-            Tank1.Ex = Tank1.Ex + 1;
-            Plane1.Attack();
-            
+            //Tank1.Target = Plane1.Target;
+            //if (Tank1.Target.Hp == 1)
+            //{
+            //    Tank1.Ex += 10;
+            //}
+            //Tank1.Ex = Tank1.Ex + 1;
+            //Plane1.Attack();
 
+            agressor = Tank1;
             LabelUpdade();
+            Stage1();
         }
 
         private void Attack3_Click(object sender, EventArgs e)
         {
-            Magic2.Target = Plane1.Target;
-            if (Plane1.Target.Hp == 1)
-            {
-                Plane1.Ex += 10;
-            }
-            Magic2.Ex = Magic2.Ex + 1;
-            Magic2.Attack();
-            if (Plane1.Target.Hp == 0)
-            {
-                Plane1.Hp = Plane1.Hp + 10;
-            }
-
+            //Magic2.Target = Plane1.Target;
+            //if (Plane1.Target.Hp == 1)
+            //{
+            //    Plane1.Ex += 10;
+            //}
+            //Magic2.Ex = Magic2.Ex + 1;
+            //Magic2.Attack();
+            //if (Plane1.Target.Hp == 0)
+            //{
+            //    Plane1.Hp = Plane1.Hp + 10;
+            //}
+            agressor = Magic1;
             LabelUpdade();
+            Stage1();
         }
 
         private void Attack4_Click(object sender, EventArgs e)
         {
-            Ship1.Target = Plane1.Target;
-            if (Plane1.Target.Hp == 1)
-            {
-                Plane1.Ex += 10;
-            }
-            Ship1.Ex = Ship1.Ex + 1;
-            Ship1.Attack();
-            if (Plane1.Target.Hp == 0)
-            {
-                Plane1.Hp = Plane1.Hp + 10;
-            }
-
+            //Ship1.Target = Plane1.Target;
+            //if (Plane1.Target.Hp == 1)
+            //{
+            //    Plane1.Ex += 10;
+            //}
+            //Ship1.Ex = Ship1.Ex + 1;
+            //Ship1.Attack();
+            //if (Plane1.Target.Hp == 0)
+            //{
+            //    Plane1.Hp = Plane1.Hp + 10;
+            //}
+            agressor = Ship1;
             LabelUpdade();
+            Stage1();
         }
 
         private void Plane_Click(object sender, EventArgs e)
         {
-            Plane2.Target = Plane1;
+            //    Plane2.Target = Plane1;
+            Plane1.Hp = Plane1.Hp - agressor.Dmg;
+            Stage0();
         }
 
         private void Tank_Click(object sender, EventArgs e)
         {
-            Plane2.Target = Tank1;
+            //  Plane2.Target = Tank1;
+            Tank1.Hp = Tank1.Hp - agressor.Dmg;
+            Stage0();
         }
 
         private void Magic_Click(object sender, EventArgs e)
         {
-            Plane2.Target = Magic1;
+            //Plane2.Target = Magic1;
+            Magic1.Hp = Magic1.Hp - agressor.Dmg;
+            Stage0();
         }
 
         private void Ship_Click(object sender, EventArgs e)
         {
-            Plane2.Target = Ship1;
+            // Plane2.Target = Ship1;
+            Ship1.Hp = Ship1.Hp - agressor.Dmg;
+            Stage0();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Plane2.Target = Plane2.Target;
-            
-            Plane2.Ex = Plane2.Ex + 1;
-            Plane2.Attack();
-          //  if (Plane1.Target.Hp == 0)
-           // {
-             //   Plane1.Hp = Plane1.Hp + 10;
-           // }
+            //Plane2.Target = Plane2.Target;
 
+            //Plane2.Ex = Plane2.Ex + 1;
+            //Plane2.Attack();
+            //if (Plane1.Target.Hp == 0)
+            //{
+            //    Plane1.Hp = Plane1.Hp + 10;
+            //}
+            agressor = Plane2;
             LabelUpdade();
+            Stage3();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Tank2.Target = Plane2.Target;
-           
-            Tank2.Ex = Tank2.Ex + 1;
-            Tank2.Attack();
-           
+            //Tank2.Target = Plane2.Target;
 
+            //Tank2.Ex = Tank2.Ex + 1;
+            //Tank2.Attack();
+
+            agressor = Tank2;
             LabelUpdade();
+            Stage3();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Magic2.Target = Plane2.Target;
-          //  if (Plane1.Target.Hp == 1)
-           // {
+            //Magic2.Target = Plane2.Target;
+            //if (Plane1.Target.Hp == 1)
+            //{
             //    Plane1.Ex += 10;
-           // }
-            Magic2.Ex = Magic2.Ex + 1;
-            Magic2.Attack();
-        //    if (Plane1.Target.Hp == 0)
-         //   {
-           //     Plane1.Hp = Plane1.Hp + 10;
-           // }
-
+            //}
+            //Magic2.Ex = Magic2.Ex + 1;
+            //Magic2.Attack();
+            //if (Plane1.Target.Hp == 0)
+            //{
+            //    Plane1.Hp = Plane1.Hp + 10;
+            //}
+            agressor = Magic2;
             LabelUpdade();
+            Stage3();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Ship2.Target = Plane2.Target;
-        //    if (Plane1.Target.Hp == 1)
-          //  {
+            //Ship2.Target = Plane2.Target;
+            //if (Plane1.Target.Hp == 1)
+            //{
             //    Plane1.Ex += 10;
             //}
-            Ship2.Ex = Ship2.Ex + 1;
-            Ship2.Attack();
-            if (Plane1.Target.Hp == 0)
-            {
-                Plane1.Hp = Plane1.Hp + 10;
-            }
-
+            //Ship2.Ex = Ship2.Ex + 1;
+            //Ship2.Attack();
+            //if (Plane1.Target.Hp == 0)
+            //{
+            //    Plane1.Hp = Plane1.Hp + 10;
+            //}
+            agressor = Ship2;
             LabelUpdade();
+            Stage3();
+        }
+        public void Stage0()
+        {
+
+            panel2.Enabled = false;
+            Plane.Enabled = false;
+            Tank.Enabled = false;
+            Magic.Enabled = false;
+            Ship.Enabled = false;
+            stage = 0;
+
+            Attack1.Enabled = true;
+            Attack2.Enabled = true;
+            Attack3.Enabled = true;
+            Attack4.Enabled = true;
+
+            label49.Text = "1";
+            label47.Text = "Выбирите атакуещего";
+
+        }
+        public void Stage1()
+        {
+            panel2.Enabled = true;
+            panel1.Enabled = false;
+            panel2.Visible = true;
+            stage = 1;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            pictureBox1.Enabled = true;
+            pictureBox2.Enabled = true;
+            pictureBox3.Enabled = true;
+            pictureBox4.Enabled = true;
+            label49.Text = "1";
+            label47.Text = "Выбирите цель";
+        }
+        public void Stage2()
+        {
+            panel2.Enabled = true;
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            button4.Enabled = true;
+            pictureBox1.Enabled = false;
+            pictureBox2.Enabled = false;
+            pictureBox3.Enabled = false;
+            pictureBox4.Enabled = false;
+
+            panel1.Enabled = false;
+
+            label49.Text = "2";
+            label47.Text = "Выбирите атакуещего";
+        }
+        public void Stage3()
+        {
+            panel2.Enabled = false;
+            panel1.Enabled = true;
+
+            Plane.Enabled = true;
+            Tank.Enabled = true;
+            Magic.Enabled = true;
+            Ship.Enabled = true;
+
+
+            Attack1.Enabled = false;
+            Attack2.Enabled = false;
+            Attack3.Enabled = false;
+            Attack4.Enabled = false;
+            label49.Text = "2";
+            label47.Text = "Выбирите цель";
+        }
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
