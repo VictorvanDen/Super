@@ -37,7 +37,8 @@ namespace MyGame
             {
                 this.Controls.Remove(button4);
                 button4.Dispose();
-                pictureBox4.Visible = true;
+                pictureBox5.Visible = true;
+                Plane1.Target = Tank2;
             }
             if (Tank1.Hp == 0)
             {
@@ -59,12 +60,14 @@ namespace MyGame
                 this.Controls.Remove(button3);
                 button3.Dispose();
                 pictureBox6.Visible = true;
+                Plane1.Target = Magic2;
             }
             if (Magic2.Hp == 0)
             {
                 this.Controls.Remove(button2);
                 button2.Dispose();
                 pictureBox7.Visible = true;
+                Plane1.Target = Ship2;
             }
             if (Ship2.Hp == 0)
             {
@@ -98,21 +101,24 @@ namespace MyGame
         }
         public void LabelUpdade ()
         {
-            label39.Text = Plane1.Hp.ToString();
+            label39.Text = Plane1.Ex.ToString();
             label5.Text = Plane1.Hp.ToString(); // для команды 1 Самолёт
             label7.Text = Plane1.Ap.ToString(); // для команды 1 Самолёт
 
+            label39.Text = Plane1.Ex.ToString();
             label12.Text = Tank1.Hp.ToString(); // для команды 1 Танк
             label13.Text = Tank1.Ap.ToString(); // для команды 1 Танк
 
+            label39.Text = Plane1.Ex.ToString();
             label14.Text = Magic1.Hp.ToString(); // для команды 1 Маг
             label15.Text = Magic1.Ap.ToString(); // для команды 1 Маг
 
+            label39.Text = Plane1.Ex.ToString();
             label18.Text = Ship1.Hp.ToString(); // для команды 1 Маг
             label19.Text = Ship1.Ap.ToString();    // для команды 1 Маг
 
 
-
+            
             label34.Text = Plane2.Hp.ToString(); // для команды 2 Самолёт
             label32.Text = Plane2.Ap.ToString(); // для команды 2 Самолёт
 
@@ -137,6 +143,10 @@ namespace MyGame
         private void Attack1_Click(object sender, EventArgs e)
         {
             Plane1.Target = Plane1.Target;
+            if (Plane1.Target.Hp == 1)
+            {
+                Plane1.Ex += 10;
+            }
             Plane1.Ex = Plane1.Ex + 1;
             Plane1.Attack();
             if (Plane1.Target.Hp == 0)
@@ -175,6 +185,133 @@ namespace MyGame
         private void pictureBox7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Attack2_Click(object sender, EventArgs e)
+        {
+            Tank1.Target = Plane1.Target;
+            if (Tank1.Target.Hp == 1)
+            {
+                Tank1.Ex += 10;
+            }
+            Tank1.Ex = Tank1.Ex + 1;
+            Plane1.Attack();
+            
+
+            LabelUpdade();
+        }
+
+        private void Attack3_Click(object sender, EventArgs e)
+        {
+            Magic2.Target = Plane1.Target;
+            if (Plane1.Target.Hp == 1)
+            {
+                Plane1.Ex += 10;
+            }
+            Magic2.Ex = Magic2.Ex + 1;
+            Magic2.Attack();
+            if (Plane1.Target.Hp == 0)
+            {
+                Plane1.Hp = Plane1.Hp + 10;
+            }
+
+            LabelUpdade();
+        }
+
+        private void Attack4_Click(object sender, EventArgs e)
+        {
+            Ship1.Target = Plane1.Target;
+            if (Plane1.Target.Hp == 1)
+            {
+                Plane1.Ex += 10;
+            }
+            Ship1.Ex = Ship1.Ex + 1;
+            Ship1.Attack();
+            if (Plane1.Target.Hp == 0)
+            {
+                Plane1.Hp = Plane1.Hp + 10;
+            }
+
+            LabelUpdade();
+        }
+
+        private void Plane_Click(object sender, EventArgs e)
+        {
+            Plane2.Target = Plane1;
+        }
+
+        private void Tank_Click(object sender, EventArgs e)
+        {
+            Plane2.Target = Tank1;
+        }
+
+        private void Magic_Click(object sender, EventArgs e)
+        {
+            Plane2.Target = Magic1;
+        }
+
+        private void Ship_Click(object sender, EventArgs e)
+        {
+            Plane2.Target = Ship1;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Plane2.Target = Plane2.Target;
+            
+            Plane2.Ex = Plane2.Ex + 1;
+            Plane2.Attack();
+          //  if (Plane1.Target.Hp == 0)
+           // {
+             //   Plane1.Hp = Plane1.Hp + 10;
+           // }
+
+            LabelUpdade();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Tank2.Target = Plane2.Target;
+           
+            Tank2.Ex = Tank2.Ex + 1;
+            Tank2.Attack();
+           
+
+            LabelUpdade();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Magic2.Target = Plane2.Target;
+          //  if (Plane1.Target.Hp == 1)
+           // {
+            //    Plane1.Ex += 10;
+           // }
+            Magic2.Ex = Magic2.Ex + 1;
+            Magic2.Attack();
+        //    if (Plane1.Target.Hp == 0)
+         //   {
+           //     Plane1.Hp = Plane1.Hp + 10;
+           // }
+
+            LabelUpdade();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Ship2.Target = Plane2.Target;
+        //    if (Plane1.Target.Hp == 1)
+          //  {
+            //    Plane1.Ex += 10;
+            //}
+            Ship2.Ex = Ship2.Ex + 1;
+            Ship2.Attack();
+            if (Plane1.Target.Hp == 0)
+            {
+                Plane1.Hp = Plane1.Hp + 10;
+            }
+
+            LabelUpdade();
         }
     }
 }

@@ -315,6 +315,7 @@
             this.button1.TabIndex = 91;
             this.button1.Text = "Attack";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -324,6 +325,7 @@
             this.button2.TabIndex = 90;
             this.button2.Text = "Attack";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -333,6 +335,7 @@
             this.button3.TabIndex = 89;
             this.button3.Text = "Attack";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -342,6 +345,7 @@
             this.button4.TabIndex = 88;
             this.button4.Text = "Attack";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // pictureBox1
             // 
@@ -575,6 +579,7 @@
             this.Attack4.TabIndex = 63;
             this.Attack4.Text = "Attack";
             this.Attack4.UseVisualStyleBackColor = true;
+            this.Attack4.Click += new System.EventHandler(this.Attack4_Click);
             // 
             // Attack3
             // 
@@ -584,6 +589,7 @@
             this.Attack3.TabIndex = 62;
             this.Attack3.Text = "Attack";
             this.Attack3.UseVisualStyleBackColor = true;
+            this.Attack3.Click += new System.EventHandler(this.Attack3_Click);
             // 
             // Attack2
             // 
@@ -593,6 +599,7 @@
             this.Attack2.TabIndex = 61;
             this.Attack2.Text = "Attack";
             this.Attack2.UseVisualStyleBackColor = true;
+            this.Attack2.Click += new System.EventHandler(this.Attack2_Click);
             // 
             // Attack1
             // 
@@ -613,6 +620,7 @@
             this.Ship.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Ship.TabIndex = 59;
             this.Ship.TabStop = false;
+            this.Ship.Click += new System.EventHandler(this.Ship_Click);
             // 
             // Magic
             // 
@@ -623,6 +631,7 @@
             this.Magic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Magic.TabIndex = 58;
             this.Magic.TabStop = false;
+            this.Magic.Click += new System.EventHandler(this.Magic_Click);
             // 
             // Tank
             // 
@@ -633,6 +642,7 @@
             this.Tank.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Tank.TabIndex = 57;
             this.Tank.TabStop = false;
+            this.Tank.Click += new System.EventHandler(this.Tank_Click);
             // 
             // Plane
             // 
@@ -643,6 +653,7 @@
             this.Plane.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Plane.TabIndex = 56;
             this.Plane.TabStop = false;
+            this.Plane.Click += new System.EventHandler(this.Plane_Click);
             // 
             // progressBar1
             // 
@@ -674,7 +685,6 @@
             // progressBar4
             // 
             this.progressBar4.Location = new System.Drawing.Point(466, 275);
-            this.progressBar4.Maximum = 800;
             this.progressBar4.Name = "progressBar4";
             this.progressBar4.Size = new System.Drawing.Size(100, 23);
             this.progressBar4.Step = 1;
@@ -729,7 +739,6 @@
             // progressBar10
             // 
             this.progressBar10.Location = new System.Drawing.Point(1098, 209);
-            this.progressBar10.Maximum = 300;
             this.progressBar10.Name = "progressBar10";
             this.progressBar10.Size = new System.Drawing.Size(100, 23);
             this.progressBar10.Step = 1;
@@ -747,7 +756,6 @@
             // progressBar12
             // 
             this.progressBar12.Location = new System.Drawing.Point(1098, 312);
-            this.progressBar12.Maximum = 800;
             this.progressBar12.Name = "progressBar12";
             this.progressBar12.Size = new System.Drawing.Size(100, 23);
             this.progressBar12.Step = 1;
@@ -865,7 +873,7 @@
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(769, 128);
+            this.pictureBox5.Location = new System.Drawing.Point(786, 123);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(429, 104);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -876,7 +884,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(771, 231);
+            this.pictureBox6.Location = new System.Drawing.Point(786, 229);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(429, 104);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -887,7 +895,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(771, 331);
+            this.pictureBox7.Location = new System.Drawing.Point(786, 323);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(429, 104);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -899,7 +907,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(771, 434);
+            this.pictureBox8.Location = new System.Drawing.Point(786, 434);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(429, 104);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
