@@ -8,6 +8,17 @@ namespace MyGame
 {
     class Ship : Hero
     {
+
+        public override void Skill1()
+        {
+            if(this.Ap <= 10)
+            {
+                Target.Hp = Target.Hp - this.Dmg - 70;
+                this.Ap -= 10;
+            }
+            
+        }
+
         public Ship(int maxhp, int hp, int maxap, int ap, int dmg, int ex, bool team, string contr)
         {
             this.Maxhp = maxhp;

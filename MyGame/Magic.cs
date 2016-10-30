@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
+   
 
     class Magic : Hero
     {
-            public Magic(int maxhp, int hp, int maxap, int ap, int dmg, int ex, bool team, string contr)
+        public override void Skill1()
+        {
+            if(this.Ap<= 60)
+                {
+                Target.Hp = Target.Hp - 400;
+                this.Ap -= 60;
+            }
+        }
+        public Magic(int maxhp, int hp, int maxap, int ap, int dmg, int ex, bool team, string contr)
         {
             this.Maxhp = maxhp;
             this.Hp = hp;

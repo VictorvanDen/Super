@@ -12,9 +12,10 @@ namespace MyGame
 {
     public partial class Form1 : Form
     {
+        int attacktype;
         Hero agressor;
         int stage = 0;
-        Hero Magic1 = new Magic(110, 110, 200, 100, 10, 0, true, "Ship");
+        Hero Magic1 = new Magic(110, 110, 200, 200, 10, 0, true, "Ship");
         Hero Plane1 = new Plane(300, 300, 100, 100, 70, 0, true, "Tank");
         Hero Tank1 = new Tank(800, 800, 100, 100, 20, 0, true, "Magic");
         Hero Ship1 = new Ship(500, 500, 150, 150, 50, 0, true, "Plane");
@@ -156,6 +157,7 @@ namespace MyGame
             //{
             //    Plane1.Hp = Plane1.Hp + 10;
             //}
+            attacktype = 0;
             agressor = Plane1;
             LabelUpdade();
             Stage1();
@@ -163,29 +165,60 @@ namespace MyGame
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            agressor.Target = Plane2;
-            agressor.Attack();
-            Stage2();
+            if (attacktype == 12)
+            {
+                agressor.Target = Plane2;
+                agressor.Skill1();
+                Stage2();
+            }
+            else if(attacktype == 0)
+            {
+                agressor.Target = Plane2;
+                agressor.Attack();
+                Stage2();
+            }
         }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            agressor.Target = Tank2;
-            agressor.Attack();
-            Stage2();
+
+            if (attacktype == 0)
+            {
+                agressor.Target = Tank2;
+                agressor.Attack();
+                Stage2();
+            }
+            else if (attacktype == 12)
+            {
+                agressor.Target = Tank2;
+                agressor.Skill1();
+                Stage2();
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            agressor.Target = Magic2;
-            agressor.Attack();
-            Stage2();
+            if (attacktype == 0)
+            {
+                agressor.Target = Magic2;
+                agressor.Attack();
+                Stage2();
+            }
+            else if (attacktype == 12)
+            {
+                agressor.Target = Magic2;
+                agressor.Skill1();
+                Stage2();
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            agressor.Target = Ship2;
-            agressor.Attack();
-            Stage2();
+            if (attacktype == 0)
+            {
+                agressor.Target = Ship2;
+                agressor.Attack();
+                Stage2();
+            }
         }
 
         private void progressBar6_Click(object sender, EventArgs e)
@@ -207,7 +240,7 @@ namespace MyGame
             //}
             //Tank1.Ex = Tank1.Ex + 1;
             //Plane1.Attack();
-
+            attacktype = 0;
             agressor = Tank1;
             LabelUpdade();
             Stage1();
@@ -226,6 +259,7 @@ namespace MyGame
             //{
             //    Plane1.Hp = Plane1.Hp + 10;
             //}
+            attacktype = 0;
             agressor = Magic1;
             LabelUpdade();
             Stage1();
@@ -244,6 +278,7 @@ namespace MyGame
             //{
             //    Plane1.Hp = Plane1.Hp + 10;
             //}
+            attacktype = 0;
             agressor = Ship1;
             LabelUpdade();
             Stage1();
@@ -287,6 +322,7 @@ namespace MyGame
             //{
             //    Plane1.Hp = Plane1.Hp + 10;
             //}
+            attacktype = 0;
             agressor = Plane2;
             LabelUpdade();
             Stage3();
@@ -298,7 +334,7 @@ namespace MyGame
 
             //Tank2.Ex = Tank2.Ex + 1;
             //Tank2.Attack();
-
+            attacktype = 0;
             agressor = Tank2;
             LabelUpdade();
             Stage3();
@@ -317,6 +353,7 @@ namespace MyGame
             //{
             //    Plane1.Hp = Plane1.Hp + 10;
             //}
+            attacktype = 0;
             agressor = Magic2;
             LabelUpdade();
             Stage3();
@@ -335,6 +372,7 @@ namespace MyGame
             //{
             //    Plane1.Hp = Plane1.Hp + 10;
             //}
+            attacktype = 0;
             agressor = Ship2;
             LabelUpdade();
             Stage3();
@@ -374,9 +412,11 @@ namespace MyGame
             pictureBox4.Enabled = true;
             label49.Text = "1";
             label47.Text = "Выбирите цель";
+            LabelUpdade();
         }
         public void Stage2()
         {
+            LabelUpdade();
             panel2.Enabled = true;
             button1.Enabled = true;
             button2.Enabled = true;
@@ -394,6 +434,7 @@ namespace MyGame
         }
         public void Stage3()
         {
+            LabelUpdade();
             panel2.Enabled = false;
             panel1.Enabled = true;
 
@@ -413,6 +454,14 @@ namespace MyGame
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void SkillAttack1_Click(object sender, EventArgs e)
+        {
+            attacktype = 12;
+            agressor = Plane1;
+            LabelUpdade();
+            Stage1();
         }
     }
 }

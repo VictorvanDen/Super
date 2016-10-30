@@ -118,6 +118,14 @@
             this.label47 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
+            this.SkillAttack1 = new System.Windows.Forms.Button();
+            this.SkillAttack2 = new System.Windows.Forms.Button();
+            this.SkillAttack3 = new System.Windows.Forms.Button();
+            this.SkillAttack4 = new System.Windows.Forms.Button();
+            this.SkiillAttack1 = new System.Windows.Forms.Button();
+            this.SkiillAttack2 = new System.Windows.Forms.Button();
+            this.SkiillAttack3 = new System.Windows.Forms.Button();
+            this.SkiillAttack4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -880,7 +888,7 @@
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(77, 120);
+            this.pictureBox5.Location = new System.Drawing.Point(602, 179);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(132, 55);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -891,7 +899,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(64, 219);
+            this.pictureBox6.Location = new System.Drawing.Point(45, 240);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(148, 42);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -924,6 +932,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.SkillAttack4);
+            this.panel1.Controls.Add(this.SkillAttack3);
+            this.panel1.Controls.Add(this.SkillAttack2);
+            this.panel1.Controls.Add(this.SkillAttack1);
             this.panel1.Controls.Add(this.Plane);
             this.panel1.Controls.Add(this.Tank);
             this.panel1.Controls.Add(this.Magic);
@@ -971,7 +983,10 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox5);
+            this.panel2.Controls.Add(this.SkiillAttack4);
+            this.panel2.Controls.Add(this.SkiillAttack3);
+            this.panel2.Controls.Add(this.SkiillAttack2);
+            this.panel2.Controls.Add(this.SkiillAttack1);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Controls.Add(this.pictureBox7);
@@ -1048,12 +1063,86 @@
             this.label49.TabIndex = 144;
             this.label49.Text = "label49";
             // 
+            // SkillAttack1
+            // 
+            this.SkillAttack1.Location = new System.Drawing.Point(186, 102);
+            this.SkillAttack1.Name = "SkillAttack1";
+            this.SkillAttack1.Size = new System.Drawing.Size(75, 23);
+            this.SkillAttack1.TabIndex = 132;
+            this.SkillAttack1.Text = "AtomicBomb";
+            this.SkillAttack1.UseVisualStyleBackColor = true;
+            this.SkillAttack1.Click += new System.EventHandler(this.SkillAttack1_Click);
+            // 
+            // SkillAttack2
+            // 
+            this.SkillAttack2.Location = new System.Drawing.Point(186, 204);
+            this.SkillAttack2.Name = "SkillAttack2";
+            this.SkillAttack2.Size = new System.Drawing.Size(75, 23);
+            this.SkillAttack2.TabIndex = 133;
+            this.SkillAttack2.Text = "Rockets";
+            this.SkillAttack2.UseVisualStyleBackColor = true;
+            // 
+            // SkillAttack3
+            // 
+            this.SkillAttack3.Location = new System.Drawing.Point(187, 295);
+            this.SkillAttack3.Name = "SkillAttack3";
+            this.SkillAttack3.Size = new System.Drawing.Size(75, 23);
+            this.SkillAttack3.TabIndex = 134;
+            this.SkillAttack3.Text = "StormAttack";
+            this.SkillAttack3.UseVisualStyleBackColor = true;
+            // 
+            // SkillAttack4
+            // 
+            this.SkillAttack4.Location = new System.Drawing.Point(186, 408);
+            this.SkillAttack4.Name = "SkillAttack4";
+            this.SkillAttack4.Size = new System.Drawing.Size(75, 23);
+            this.SkillAttack4.TabIndex = 135;
+            this.SkillAttack4.Text = "PlaneAttack";
+            this.SkillAttack4.UseVisualStyleBackColor = true;
+            // 
+            // SkiillAttack1
+            // 
+            this.SkiillAttack1.Location = new System.Drawing.Point(202, 107);
+            this.SkiillAttack1.Name = "SkiillAttack1";
+            this.SkiillAttack1.Size = new System.Drawing.Size(75, 23);
+            this.SkiillAttack1.TabIndex = 140;
+            this.SkiillAttack1.Text = "AtomicBomb";
+            this.SkiillAttack1.UseVisualStyleBackColor = true;
+            // 
+            // SkiillAttack2
+            // 
+            this.SkiillAttack2.Location = new System.Drawing.Point(205, 203);
+            this.SkiillAttack2.Name = "SkiillAttack2";
+            this.SkiillAttack2.Size = new System.Drawing.Size(75, 23);
+            this.SkiillAttack2.TabIndex = 141;
+            this.SkiillAttack2.Text = "Rockets";
+            this.SkiillAttack2.UseVisualStyleBackColor = true;
+            // 
+            // SkiillAttack3
+            // 
+            this.SkiillAttack3.Location = new System.Drawing.Point(205, 306);
+            this.SkiillAttack3.Name = "SkiillAttack3";
+            this.SkiillAttack3.Size = new System.Drawing.Size(75, 23);
+            this.SkiillAttack3.TabIndex = 142;
+            this.SkiillAttack3.Text = "StormAttack";
+            this.SkiillAttack3.UseVisualStyleBackColor = true;
+            // 
+            // SkiillAttack4
+            // 
+            this.SkiillAttack4.Location = new System.Drawing.Point(205, 412);
+            this.SkiillAttack4.Name = "SkiillAttack4";
+            this.SkiillAttack4.Size = new System.Drawing.Size(75, 23);
+            this.SkiillAttack4.TabIndex = 143;
+            this.SkiillAttack4.Text = "PlaneAttack";
+            this.SkiillAttack4.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1212, 634);
             this.Controls.Add(this.label49);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label48);
             this.Controls.Add(this.label47);
             this.Controls.Add(this.panel2);
@@ -1173,6 +1262,14 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Button SkillAttack4;
+        private System.Windows.Forms.Button SkillAttack3;
+        private System.Windows.Forms.Button SkillAttack2;
+        private System.Windows.Forms.Button SkillAttack1;
+        private System.Windows.Forms.Button SkiillAttack4;
+        private System.Windows.Forms.Button SkiillAttack3;
+        private System.Windows.Forms.Button SkiillAttack2;
+        private System.Windows.Forms.Button SkiillAttack1;
     }
 }
 

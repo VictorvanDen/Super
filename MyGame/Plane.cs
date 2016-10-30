@@ -9,6 +9,17 @@ namespace MyGame
     class Plane : Hero
 
     {
+
+        public override void Skill1()
+        {
+            if (Ap >= 30)
+            {
+                Target.Hp = Target.Hp - 300;
+                this.Ap -= 30;
+            }
+          
+        }
+
         public Plane(int maxhp, int hp, int maxap, int ap, int dmg, int ex, bool team, string contr)
         {
             this.Maxhp = maxhp;

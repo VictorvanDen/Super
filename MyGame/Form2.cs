@@ -19,6 +19,10 @@ namespace MyGame
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Form F1 = new Form1();
+            this.Hide();
+            F1.ShowDialog();
+            this.Close();
 
         }
     }

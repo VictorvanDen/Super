@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyGame
 {
-    public class Hero
+    public abstract class Hero
     {
         private int hp;
         public int Hp
@@ -146,7 +146,7 @@ namespace MyGame
         private Hero target;
         private string contr;
 
-
+        public abstract void Skill1();
 
         public void Attack()
         {
